@@ -14,7 +14,7 @@ kind: Deployment
 metadata:
   name: nginx
 spec:
-  replicas: 4
+  replicas: 1
   revisionHistoryLimit: 3
   selector:
     matchLabels:
@@ -25,7 +25,7 @@ spec:
         app: nginx
     spec:
       containers:
-        - image: nginx:1.21.6-alpine
+        - image: nginx #:1.21.6-alpine
           name: nginx
           ports:
             - containerPort: 80
